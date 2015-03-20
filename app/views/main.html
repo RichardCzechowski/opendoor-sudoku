@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row" ng-class="{'duplicate': rowValid{{$index}} }" ng-repeat="row in getNumber() track by $index">
+    <div class="col col-sm-1" ng-class="{'duplicate': colValid{{$index}} }" ng-repeat="col in getNumber() track by $index">
+      <input class="square" ng-model="sudoku[$parent.$index][$index]" type="text">
+    </div>
+    <div class="col col-sm-3">
+    </div>
+  </div>
+</div>
